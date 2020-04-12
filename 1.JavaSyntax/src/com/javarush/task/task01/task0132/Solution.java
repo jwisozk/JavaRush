@@ -1,0 +1,20 @@
+package com.javarush.task.task01.task0132;
+
+/* 
+Сумма цифр трехзначного числа
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        System.out.println(sumDigitsInNumber(102));
+    }
+
+    public static int sumDigitsInNumber(int number)
+    {
+        int sum = 0;
+        if (number > 9)
+            sum = sumDigitsInNumber(number / 10);
+        sum += number % 10;
+        return sum;
+    }
+}
